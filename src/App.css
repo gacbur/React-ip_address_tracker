@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin:0; 
+    padding:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app{
+    width:100%;
+    min-height:100vh;
+    font-family: 'Rubik', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header{
+    padding:1.2em 0em;
+    width:100%;
+    height: 35vh;
+    background-image: url('./images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h1{
+    color:white;
+    padding:1em 0em;
+}
+
+.search-element{
+    background-color: white;
+    height: 50px;
+    width: 55%;
+    max-width: 520px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.search-element input{
+    border-radius: 16px;
+    padding:1em 1.5em;
+    height: 100%;
+    width:90%;
+    border:none;
+    font-size: 18px;
+    color: #2C2C2C;
+}
+
+.search-element input:focus{
+    outline: 1px solid black;
+}
+
+.search-element button{
+    transition: .2s;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 0px 10px 10px 0px;
+    height: 100%;
+    width:10%;
+    border:none;
+}
+
+.search-element button:hover{
+    background-color: #3F3F3F;
+}
+
+.search-element button:focus{
+    outline: 1px solid black;
+}
+
+.infobar{
+    z-index: 1000;
+    width:100%;
+    max-width: 900px;
+    margin-top:5em;
+    padding:2.5em 2em;
+    box-shadow: 0 15px 8px rgba(0,0,0,.1);
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.infobar-elem:first-child{
+    padding:0em 2em 0em 0em;
+}
+
+.infobar-elem + .infobar-elem{
+    padding:0em 1.5em;
+    border-left: 2px #cecece solid;
+}
+
+.infobar-elem h4{
+    font-size: 10px;
+    color: rgb(112, 112, 112);
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+.infobar-elem h2{
+    font-size: 23px;
+}
+
+.leaflet-container {
+    z-index: 1;
+    width:100%;
+    height: 65vh;
+}
+
+.map{
+    width:100%;
+    height: 65vh;
+    background-color: white;
+}
+
+@media all and (max-width:720px){
+
+    .header-content{
+        width:95%;
+    }
+
+    .header h1{
+        font-size: 25px;
+        color:white;
+        padding:.3em 0em;
+    }
+
+    .search-element{
+        height: 45px;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .infobar{
+        width:100%;
+        max-width: 500px;
+        margin-top:1.5em;
+        padding:.5em 0em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .infobar-elem{
+        margin:.25em 0em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .infobar-elem:first-child{
+        padding:0em 0em 0em 0em;
+    }
+    
+    .infobar-elem + .infobar-elem{
+        padding:0em 0em;
+        border-left: 0px #cecece solid;
+    }
+    
+    .infobar-elem h4{
+        font-size: 8px;
+        color: rgb(112, 112, 112);
+        font-weight: 600;
+        margin-bottom: .5em;
+    }
+    
+    .infobar-elem h2{
+        font-size: 17px;
+        letter-spacing: .5px;
+    }
+
 }
