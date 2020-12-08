@@ -25,7 +25,7 @@ const Map = () => {
     const { trackerInfo } = useContext(AppContext)
 
     return (
-        <MapContainer center={trackerInfo.location} zoom={13} scrollWheelZoom={true}>
+        <MapContainer zoomControl={false} center={trackerInfo.location} zoom={13} scrollWheelZoom={true}>
             <CenterView center={trackerInfo.location} />
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

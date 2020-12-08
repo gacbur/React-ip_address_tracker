@@ -131,19 +131,19 @@
     }
 
     .header h1{
-        font-size: 25px;
+        font-size: 24px;
         color:white;
         padding:.3em 0em;
     }
 
     .search-element{
-        height: 45px;
+        height: 41px;
         width: 100%;
         max-width: 450px;
     }
 
     .infobar{
-        width:75%;
+        width:96%;
         max-width: 500px;
         margin-top:1.5em;
         padding:.5em 0em;
