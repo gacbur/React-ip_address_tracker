@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="search-element">
                     <input
                         type="text"
-                        placeholder="Search for any IP od domain"
+                        placeholder="Search for any IP or domain"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                     ></input>
